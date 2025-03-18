@@ -24,7 +24,9 @@ export function InputWithLabel({
         required={required}
       />
       {errors.length > 0 && (
-        <span className="text-red-500 font-medium">Input error</span>
+        <span className="text-red-500 font-medium">
+          {errors.map((error) => error).join(", ")}
+        </span>
       )}
     </div>
   );
